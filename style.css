@@ -168,3 +168,69 @@ h2 {
     background: transparent;
     display: block;
 }
+
+
+/* Tombol ganti tema */
+#theme-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: #1e293b;
+    color: white;
+
+    cursor: pointer;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+#theme-button:hover {
+    transform: scale(1.05);
+}
+
+/* Tema terang */
+body.light-mode {
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f0f9ff,
+        #dbeafe
+    );
+
+    color: #1e293b;
+}
+
+body.light-mode .profile-card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.15);
+}
+
+body.light-mode h1,
+body.light-mode h2 {
+    color: #1e40af;
+}
+
+body.light-mode .description {
+    color: #475569;
+}
+
+body.light-mode .hobbies span {
+    background: #dbeafe;
+    color: #1e3a8a;
+}
+
+body.light-mode .footer {
+    color: #64748b;
+}
+
+body.light-mode #theme-button {
+    background: white;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
