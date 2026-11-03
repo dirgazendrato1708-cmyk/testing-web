@@ -163,3 +163,8 @@ h2 {
 
     margin-top: 25px;
 }
+
+.footer {
+    background: transparent;
+    display: block;
+}
