@@ -318,3 +318,29 @@ body.dark-mode {
     }
 
 }
+
+
+/* Animasi kursor mengetik */
+.cursor {
+    display: inline-block;
+    color: #7c3aed;
+    font-weight: bold;
+
+    animation: blink 0.7s infinite;
+}
+
+/* Kursor berkedip */
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Tampilan teks typing */
+.role {
+    min-height: 28px;
+}
