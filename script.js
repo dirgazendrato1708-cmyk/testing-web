@@ -1,73 +1,57 @@
 
-/* =================================
-   FITUR SAPA PENGUNJUNG
-================================= */
+/* ========================= */
+/* TOMBOL SAPA */
+/* ========================= */
 
-// Ambil tombol dari HTML
-const greetButton =
-    document.getElementById("greet-button");
+const greetButton = document.getElementById("greet-button");
 
-// Jalankan ketika tombol diklik
 greetButton.addEventListener("click", function() {
 
-    alert(
-        "Terima kasih sudah mengunjungi website Dirga! 🚀"
-    );
+    alert("Halo! Terima kasih sudah mengunjungi website Dirga! 🚀");
 
 });
 
 
-/* =================================
-   FITUR DARK MODE & LIGHT MODE
-================================= */
+/* ========================= */
+/* DARK MODE & LIGHT MODE */
+/* ========================= */
 
-// Ambil tombol tema
-const themeButton =
-    document.getElementById("theme-button");
+const themeButton = document.getElementById("theme-button");
 
+// Mengambil tema yang pernah disimpan
+const savedTheme = localStorage.getItem("tema");
 
-// Periksa tema yang tersimpan di browser
-const savedTheme =
-    localStorage.getItem("tema");
+// Jika sebelumnya menggunakan dark mode
+if (savedTheme === "gelap") {
 
+    document.body.classList.add("dark-mode");
 
-// Jika sebelumnya pengunjung memilih tema terang
-if (savedTheme === "terang") {
-
-    document.body.classList.add("light-mode");
-
-    themeButton.textContent = "🌙 Dark Mode";
+    themeButton.textContent = "☀️ Light Mode";
 
 } else {
 
-    themeButton.textContent = "☀️ Light Mode";
+    themeButton.textContent = "🌙 Dark Mode";
 
 }
 
 
-// Jalankan ketika tombol tema diklik
+// Ketika tombol tema diklik
 themeButton.addEventListener("click", function() {
 
-    // Ganti tema
-    document.body.classList.toggle("light-mode");
+    document.body.classList.toggle("dark-mode");
 
+    // Jika sekarang dark mode
+    if (document.body.classList.contains("dark-mode")) {
 
-    // Periksa apakah sekarang tema terang
-    if (document.body.classList.contains("light-mode")) {
+        themeButton.textContent = "☀️ Light Mode";
 
-        // Ubah tulisan tombol
-        themeButton.textContent = "🌙 Dark Mode";
-
-        // Simpan pilihan pengunjung
-        localStorage.setItem("tema", "terang");
+        localStorage.setItem("tema", "gelap");
 
     } else {
 
-        // Ubah tulisan tombol
-        themeButton.textContent = "☀️ Light Mode";
+        themeButton.textContent = "🌙 Dark Mode";
 
-        // Simpan pilihan pengunjung
-        localStorage.setItem("tema", "gelap");
+        localStorage.setItem("tema", "terang");
 
     }
 
