@@ -1,16 +1,27 @@
 
-/* Pengaturan seluruh halaman */
+/* =================================
+   RESET CSS
+================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* =================================
+   BODY / BACKGROUND
+================================= */
+
 body {
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 80px 20px 40px;
 
     background: linear-gradient(
         135deg,
@@ -21,28 +32,43 @@ body {
 
     font-family: Arial, sans-serif;
     color: white;
-    padding: 20px;
+
+    transition: background 0.4s,
+                color 0.4s;
 }
 
-/* Kartu profil */
+
+/* =================================
+   PROFILE CARD
+================================= */
+
 .profile-card {
     width: 100%;
     max-width: 380px;
 
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
     padding: 35px 25px;
-    border-radius: 25px;
 
     text-align: center;
 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(
+        255, 255, 255, 0.15
+    );
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px
+        rgba(0, 0, 0, 0.3);
 
     backdrop-filter: blur(10px);
 }
 
-/* Badge */
+
+/* =================================
+   BADGE
+================================= */
+
 .badge {
     display: inline-block;
 
@@ -50,13 +76,19 @@ body {
     color: #bfdbfe;
 
     padding: 8px 15px;
+
     border-radius: 20px;
 
     font-size: 12px;
+
     margin-bottom: 25px;
 }
 
-/* Avatar */
+
+/* =================================
+   AVATAR
+================================= */
+
 .avatar {
     width: 100px;
     height: 100px;
@@ -66,7 +98,7 @@ body {
     align-items: center;
 
     margin: 0 auto 20px;
-
+    object-fit: cover;
     border-radius: 50%;
 
     background: linear-gradient(
@@ -78,56 +110,88 @@ body {
     font-size: 45px;
     font-weight: bold;
 
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(
+        255, 255, 255, 0.2
+    );
 }
 
-/* Nama */
+
+/* =================================
+   NAMA DAN JUDUL
+================================= */
+
 h1 {
     font-size: 30px;
+
     margin-bottom: 10px;
 }
 
-/* Profesi */
+h2 {
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   ROLE
+================================= */
+
 .role {
     color: #7dd3fc;
+
     margin-bottom: 20px;
 }
 
-/* Deskripsi */
+
+/* =================================
+   DESKRIPSI
+================================= */
+
 .description {
     color: #cbd5e1;
+
     line-height: 1.7;
     font-size: 14px;
 
     margin-bottom: 25px;
 }
 
-/* Judul hobi */
-h2 {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
 
-/* Hobi */
+/* =================================
+   HOBI
+================================= */
+
 .hobbies {
     display: flex;
+
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 10px;
 
     margin-bottom: 30px;
 }
 
 .hobbies span {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(
+        255, 255, 255, 0.1
+    );
+
+    color: white;
 
     padding: 10px 12px;
+
     border-radius: 10px;
 
     font-size: 13px;
 }
 
-/* Tombol kontak */
+
+/* =================================
+   TOMBOL KONTAK
+================================= */
+
 .contact-button {
     display: block;
 
@@ -138,17 +202,20 @@ h2 {
     );
 
     color: white;
+
     text-decoration: none;
 
     padding: 14px;
+
     border-radius: 12px;
 
     font-weight: bold;
 
     transition: 0.3s;
+
+    margin-bottom: 12px;
 }
 
-/* Efek ketika mouse diarahkan ke tombol */
 .contact-button:hover {
     transform: translateY(-3px);
 
@@ -156,44 +223,100 @@ h2 {
         rgba(59, 130, 246, 0.4);
 }
 
-/* Footer */
+
+/* =================================
+   TOMBOL SAPA
+================================= */
+
+.greet-button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid rgba(
+        255, 255, 255, 0.2
+    );
+
+    border-radius: 12px;
+
+    background: rgba(
+        255, 255, 255, 0.1
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.greet-button:hover {
+    background: rgba(
+        255, 255, 255, 0.2
+    );
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
 .footer {
     color: #94a3b8;
+
     font-size: 12px;
 
     margin-top: 25px;
-}
 
-.footer {
     background: transparent;
-    display: block;
 }
 
 
-/* Tombol ganti tema */
+/* =================================
+   TOMBOL DARK MODE
+================================= */
+
 #theme-button {
     position: fixed;
+
     top: 20px;
     right: 20px;
 
     padding: 12px 18px;
+
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border: 1px solid rgba(
+        255, 255, 255, 0.2
+    );
 
     background: #1e293b;
+
     color: white;
 
     cursor: pointer;
+
     font-size: 14px;
 
     transition: 0.3s;
+
+    z-index: 100;
 }
 
 #theme-button:hover {
     transform: scale(1.05);
 }
 
-/* Tema terang */
+
+/* =================================
+   LIGHT MODE
+================================= */
+
 body.light-mode {
     background: linear-gradient(
         135deg,
@@ -206,9 +329,14 @@ body.light-mode {
 }
 
 body.light-mode .profile-card {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(
+        255, 255, 255, 0.75
+    );
+
     border: 1px solid #bfdbfe;
-    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.15);
+
+    box-shadow: 0 20px 50px
+        rgba(30, 64, 175, 0.15);
 }
 
 body.light-mode h1,
@@ -220,6 +348,10 @@ body.light-mode .description {
     color: #475569;
 }
 
+body.light-mode .role {
+    color: #2563eb;
+}
+
 body.light-mode .hobbies span {
     background: #dbeafe;
     color: #1e3a8a;
@@ -229,8 +361,44 @@ body.light-mode .footer {
     color: #64748b;
 }
 
+body.light-mode .greet-button {
+    color: #1e40af;
+
+    background: #dbeafe;
+
+    border: 1px solid #bfdbfe;
+}
+
 body.light-mode #theme-button {
     background: white;
+
     color: #1e40af;
+
     border: 1px solid #bfdbfe;
+}
+
+
+/* =================================
+   RESPONSIVE / MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 80px 15px 30px;
+    }
+
+    .profile-card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #theme-button {
+        top: 12px;
+        right: 12px;
+    }
+
 }

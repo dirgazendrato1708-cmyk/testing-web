@@ -1,42 +1,55 @@
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dirga | My Profile</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
+    <title>Dirga | Personal Profile</title>
+
+    <!-- Menghubungkan CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Tombol Dark Mode -->
     <button id="theme-button">
-    🌙 Ganti Tema
-   </button>
+        🌙 Dark Mode
+    </button>
 
-    <div class="profile-card">
+    <!-- Kartu Profil -->
+    <main class="profile-card">
 
+        <!-- Badge -->
         <div class="badge">
             Beginner Developer
         </div>
 
+        <!-- Avatar -->
         <div class="avatar">
-            D
+            <img src="images/profile.jpg" alt="Foto profil Dirga">
         </div>
 
+        <!-- Nama -->
         <h1>Dirga</h1>
 
+        <!-- Profesi -->
         <p class="role">
             Future Web Developer 🚀
         </p>
 
+        <!-- Deskripsi -->
         <p class="description">
             Halo! Saya sedang belajar HTML, CSS,
             Git, dan GitHub. Saya ingin menjadi
             developer yang hebat.
         </p>
 
+        <!-- Hobi -->
         <h2>Hobi Saya</h2>
 
         <div class="hobbies">
@@ -45,19 +58,27 @@
             <span>🎧 Music</span>
         </div>
 
+        <!-- Tombol Kontak -->
         <a href="mailto:emailkamu@example.com"
            class="contact-button">
             Hubungi Saya
         </a>
-       <button id="greet-button" class="contact-button">
-    	Sapa Saya 👋
-	</button>
 
+        <!-- Tombol Sapaan -->
+        <button id="greet-button"
+                class="greet-button">
+            Sapa Saya 👋
+        </button>
+
+        <!-- Footer -->
         <p class="footer">
             Made with ❤️ by Dirga
         </p>
 
-    </div>
-<script src="script.js"></script>
+    </main>
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
