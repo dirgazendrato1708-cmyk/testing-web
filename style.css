@@ -1,167 +1,135 @@
 
-/* =================================
-   RESET CSS
-================================= */
-
+/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* =================================
-   BODY / BACKGROUND
-================================= */
-
+/* Tampilan utama halaman */
 body {
+    font-family: Arial, sans-serif;
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 80px 20px 40px;
+    padding: 40px 20px;
 
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e3a8a,
-        #312e81
-    );
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    color: #1e293b;
 
-    font-family: Arial, sans-serif;
-    color: white;
-
-    transition: background 0.4s,
-                color 0.4s;
+    transition: background 0.4s, color 0.4s;
 }
 
-
-/* =================================
-   PROFILE CARD
-================================= */
-
+/* Kartu profil */
 .profile-card {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
 
     padding: 35px 25px;
 
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.85);
 
-    border: 1px solid rgba(
-        255, 255, 255, 0.15
-    );
-
+    border: 1px solid #bfdbfe;
     border-radius: 25px;
 
-    box-shadow: 0 20px 50px
-        rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.12);
 
     backdrop-filter: blur(10px);
+
+    transition: transform 0.3s, background 0.4s;
 }
 
+.profile-card:hover {
+    transform: translateY(-5px);
+}
 
-/* =================================
-   BADGE
-================================= */
-
+/* Badge */
 .badge {
     display: inline-block;
 
-    background: #1d4ed8;
-    color: #bfdbfe;
+    background: #2563eb;
+    color: white;
 
-    padding: 8px 15px;
+    padding: 8px 16px;
 
-    border-radius: 20px;
+    border-radius: 30px;
 
-    font-size: 12px;
-
-    margin-bottom: 25px;
-}
-
-
-/* =================================
-   AVATAR
-================================= */
-
-.avatar {
-    width: 100px;
-    height: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 auto 20px;
-    object-fit: cover;
-    border-radius: 50%;
-
-    background: linear-gradient(
-        135deg,
-        #38bdf8,
-        #6366f1
-    );
-
-    font-size: 45px;
-    font-weight: bold;
-
-    border: 4px solid rgba(
-        255, 255, 255, 0.2
-    );
-}
-
-
-/* =================================
-   NAMA DAN JUDUL
-================================= */
-
-h1 {
-    font-size: 30px;
-
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 16px;
-
-    margin-bottom: 15px;
-}
-
-
-/* =================================
-   ROLE
-================================= */
-
-.role {
-    color: #7dd3fc;
+    font-size: 13px;
 
     margin-bottom: 20px;
 }
 
+/* Foto profil */
+.avatar {
+    width: 130px;
+    height: 130px;
 
-/* =================================
-   DESKRIPSI
-================================= */
+    margin: 0 auto 20px;
 
+    border-radius: 50%;
+
+    padding: 4px;
+
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+
+    overflow: hidden;
+}
+
+/* Gambar di dalam lingkaran */
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 50%;
+}
+
+/* Nama */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Subjudul pekerjaan */
+.role {
+    color: #38bdf8;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+/* Deskripsi */
 .description {
-    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.8;
 
-    line-height: 1.7;
-    font-size: 14px;
+    color: #64748b;
 
     margin-bottom: 25px;
 }
 
+/* Judul hobi */
+h2 {
+    font-size: 20px;
 
-/* =================================
-   HOBI
-================================= */
+    margin-bottom: 15px;
 
+    color: #1d4ed8;
+}
+
+/* Daftar hobi */
 .hobbies {
     display: flex;
 
@@ -174,218 +142,162 @@ h2 {
 }
 
 .hobbies span {
-    background: rgba(
-        255, 255, 255, 0.1
-    );
+    background: #dbeafe;
 
-    color: white;
+    color: #1e40af;
 
-    padding: 10px 12px;
+    padding: 10px 14px;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
-    font-size: 13px;
+    font-size: 14px;
+
+    transition: transform 0.3s;
 }
 
+.hobbies span:hover {
+    transform: translateY(-4px);
+}
 
-/* =================================
-   TOMBOL KONTAK
-================================= */
-
+/* Tombol kontak */
 .contact-button {
     display: block;
 
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
+    width: 100%;
+
+    padding: 14px;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
 
     color: white;
 
     text-decoration: none;
 
-    padding: 14px;
+    font-weight: bold;
+    font-size: 16px;
 
     border-radius: 12px;
 
-    font-weight: bold;
-
-    transition: 0.3s;
-
     margin-bottom: 12px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .contact-button:hover {
-    transform: translateY(-3px);
+    transform: scale(1.03);
 
-    box-shadow: 0 10px 25px
-        rgba(59, 130, 246, 0.4);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
 }
 
-
-/* =================================
-   TOMBOL SAPA
-================================= */
-
+/* Tombol sapa */
 .greet-button {
-    width: 100%;
+    border: none;
 
-    padding: 12px;
-
-    border: 1px solid rgba(
-        255, 255, 255, 0.2
-    );
+    padding: 12px 24px;
 
     border-radius: 12px;
 
-    background: rgba(
-        255, 255, 255, 0.1
-    );
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
 
     color: white;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .greet-button:hover {
-    background: rgba(
-        255, 255, 255, 0.2
-    );
-
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
-
-/* =================================
-   FOOTER
-================================= */
-
+/* Footer */
 .footer {
-    color: #94a3b8;
+    font-size: 13px;
 
-    font-size: 12px;
+    color: #64748b;
 
     margin-top: 25px;
-
-    background: transparent;
 }
 
-
-/* =================================
-   TOMBOL DARK MODE
-================================= */
-
-#theme-button {
+/* Tombol tema */
+.theme-button {
     position: fixed;
 
     top: 20px;
     right: 20px;
 
-    padding: 12px 18px;
+    padding: 10px 15px;
 
-    border-radius: 30px;
-
-    border: 1px solid rgba(
-        255, 255, 255, 0.2
-    );
+    border: none;
+    border-radius: 10px;
 
     background: #1e293b;
-
     color: white;
+
+    font-size: 13px;
 
     cursor: pointer;
 
-    font-size: 14px;
-
-    transition: 0.3s;
-
-    z-index: 100;
+    transition: transform 0.3s;
 }
 
-#theme-button:hover {
+.theme-button:hover {
     transform: scale(1.05);
 }
 
+/* ========================= */
+/* DARK MODE */
+/* ========================= */
 
-/* =================================
-   LIGHT MODE
-================================= */
+body.dark-mode {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
 
-body.light-mode {
-    background: linear-gradient(
-        135deg,
-        #e0f2fe,
-        #f0f9ff,
-        #dbeafe
-    );
+    color: #f1f5f9;
+}
+
+.dark-mode .profile-card {
+    background: rgba(30, 41, 59, 0.9);
+
+    border-color: #334155;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .description {
+    color: #cbd5e1;
+}
+
+.dark-mode h2 {
+    color: #93c5fd;
+}
+
+.dark-mode .hobbies span {
+    background: #334155;
+
+    color: #e2e8f0;
+}
+
+.dark-mode .footer {
+    color: #94a3b8;
+}
+
+.dark-mode .theme-button {
+    background: #f1f5f9;
 
     color: #1e293b;
 }
 
-body.light-mode .profile-card {
-    background: rgba(
-        255, 255, 255, 0.75
-    );
-
-    border: 1px solid #bfdbfe;
-
-    box-shadow: 0 20px 50px
-        rgba(30, 64, 175, 0.15);
-}
-
-body.light-mode h1,
-body.light-mode h2 {
-    color: #1e40af;
-}
-
-body.light-mode .description {
-    color: #475569;
-}
-
-body.light-mode .role {
-    color: #2563eb;
-}
-
-body.light-mode .hobbies span {
-    background: #dbeafe;
-    color: #1e3a8a;
-}
-
-body.light-mode .footer {
-    color: #64748b;
-}
-
-body.light-mode .greet-button {
-    color: #1e40af;
-
-    background: #dbeafe;
-
-    border: 1px solid #bfdbfe;
-}
-
-body.light-mode #theme-button {
-    background: white;
-
-    color: #1e40af;
-
-    border: 1px solid #bfdbfe;
-}
-
-
-/* =================================
-   RESPONSIVE / MOBILE
-================================= */
+/* ========================= */
+/* RESPONSIVE UNTUK HP */
+/* ========================= */
 
 @media (max-width: 480px) {
 
     body {
-        padding: 80px 15px 30px;
+        padding: 25px 15px;
     }
 
     .profile-card {
@@ -393,10 +305,14 @@ body.light-mode #theme-button {
     }
 
     h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
-    #theme-button {
+    .description {
+        font-size: 14px;
+    }
+
+    .theme-button {
         top: 12px;
         right: 12px;
     }
