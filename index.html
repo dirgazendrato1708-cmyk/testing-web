@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dirga | Personal Profile</title>
+    <title>Dirga | Personal Portfolio</title>
 
+    <!-- Menghubungkan CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,10 +19,13 @@
         🌙 Dark Mode
     </button>
 
-    <!-- Kartu Profil -->
+    <!-- Kartu Profil Utama -->
     <main class="profile-card">
 
-        <div class="badge">Beginner Developer</div>
+        <!-- Badge -->
+        <div class="badge">
+            Beginner Developer
+        </div>
 
         <!-- Foto Profil -->
         <div class="avatar">
@@ -37,22 +42,101 @@
 
         <!-- Deskripsi -->
         <p class="description">
-            Halo! Saya sedang belajar HTML, CSS, Git, dan GitHub.
-            Saya ingin menjadi developer yang hebat.
+            Halo! Saya sedang belajar HTML, CSS, JavaScript, Git, dan GitHub.
+            Saya ingin menjadi developer yang hebat dan terus berkembang
+            di dunia teknologi.
         </p>
 
-        <!-- Hobi -->
-        <h2>Hobi Saya</h2>
+        <!-- ===================== -->
+        <!-- SECTION SKILLS -->
+        <!-- ===================== -->
 
-        <div class="hobbies">
-            <span>💻 Coding</span>
-            <span>🎮 Gaming</span>
-            <span>🎧 Music</span>
-        </div>
+        <section class="skills">
 
-        <!-- Tombol Kontak -->
+            <h2>My Skills 💻</h2>
+
+            <!-- Skill HTML -->
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress html"></div>
+                </div>
+
+            </div>
+
+            <!-- Skill CSS -->
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>50%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress css"></div>
+                </div>
+
+            </div>
+
+            <!-- Skill JavaScript -->
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>30%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress javascript"></div>
+                </div>
+
+            </div>
+
+            <!-- Skill Git & GitHub -->
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Git & GitHub</span>
+                    <span>45%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress git"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== -->
+        <!-- SECTION HOBI -->
+        <!-- ===================== -->
+
+        <section class="hobby-section">
+
+            <h2>Hobi Saya 🎯</h2>
+
+            <div class="hobbies">
+
+                <span>💻 Coding</span>
+                <span>🎮 Gaming</span>
+                <span>🎧 Music</span>
+
+            </div>
+
+        </section>
+
+        <!-- ===================== -->
+        <!-- TOMBOL KONTAK -->
+        <!-- ===================== -->
+
         <a href="mailto:emailkamu@example.com" class="contact-button">
-            Hubungi Saya
+            Hubungi Saya ✉️
         </a>
 
         <!-- Tombol Sapaan -->
@@ -67,7 +151,7 @@
 
     </main>
 
-    <!-- JavaScript -->
+    <!-- Menghubungkan JavaScript -->
     <script src="script.js"></script>
 
 </body>

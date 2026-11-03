@@ -1,7 +1,7 @@
 
-/* ========================= */
+/* ================================= */
 /* 1. TOMBOL SAPA */
-/* ========================= */
+/* ================================= */
 
 const greetButton = document.getElementById("greet-button");
 
@@ -12,16 +12,16 @@ greetButton.addEventListener("click", function() {
 });
 
 
-/* ========================= */
-/* 2. DARK MODE */
-/* ========================= */
+/* ================================= */
+/* 2. DARK MODE & LIGHT MODE */
+/* ================================= */
 
 const themeButton = document.getElementById("theme-button");
 
-// Membaca tema yang tersimpan
+// Membaca tema yang pernah disimpan
 const savedTheme = localStorage.getItem("tema");
 
-// Mengatur tema saat halaman dibuka
+// Mengatur tema saat website dibuka
 if (savedTheme === "gelap") {
 
     document.body.classList.add("dark-mode");
@@ -36,11 +36,12 @@ if (savedTheme === "gelap") {
 
 }
 
-// Mengganti tema ketika tombol diklik
+// Mengganti tema saat tombol diklik
 themeButton.addEventListener("click", function() {
 
     document.body.classList.toggle("dark-mode");
 
+    // Jika Dark Mode aktif
     if (document.body.classList.contains("dark-mode")) {
 
         themeButton.textContent = "☀️ Light Mode";
@@ -58,9 +59,9 @@ themeButton.addEventListener("click", function() {
 });
 
 
-/* ========================= */
+/* ================================= */
 /* 3. ANIMASI TYPING */
-/* ========================= */
+/* ================================= */
 
 const typingText = document.getElementById("typing-text");
 
@@ -72,15 +73,18 @@ const textList = [
 ];
 
 let textIndex = 0;
+
 let charIndex = 0;
+
 let isDeleting = false;
+
 
 // Fungsi animasi mengetik
 function typingAnimation() {
 
     const currentText = textList[textIndex];
 
-    // Ketika sedang mengetik
+    // Jika sedang mengetik
     if (isDeleting === false) {
 
         typingText.textContent =
@@ -88,7 +92,7 @@ function typingAnimation() {
 
         charIndex++;
 
-        // Tunggu jika tulisan sudah lengkap
+        // Jika tulisan sudah lengkap
         if (charIndex === currentText.length) {
 
             isDeleting = true;
@@ -100,13 +104,13 @@ function typingAnimation() {
 
     } else {
 
-        // Ketika sedang menghapus tulisan
+        // Jika sedang menghapus tulisan
         typingText.textContent =
             currentText.substring(0, charIndex - 1);
 
         charIndex--;
 
-        // Jika tulisan sudah habis dihapus
+        // Jika tulisan sudah terhapus
         if (charIndex === 0) {
 
             isDeleting = false;
@@ -124,12 +128,13 @@ function typingAnimation() {
 
     }
 
-    // Kecepatan mengetik dan menghapus
+    // Kecepatan mengetik
     const speed = isDeleting ? 50 : 100;
 
     setTimeout(typingAnimation, speed);
 
 }
 
-// Menjalankan animasi
+
+// Menjalankan animasi typing
 typingAnimation();
