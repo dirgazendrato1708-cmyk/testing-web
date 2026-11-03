@@ -1,12 +1,18 @@
 
-/* Reset dasar */
+/* ========================= */
+/* RESET CSS */
+/* ========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Tampilan utama halaman */
+/* ========================= */
+/* BODY */
+/* ========================= */
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -15,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 40px 20px;
+    padding: 80px 20px 40px;
 
     background: linear-gradient(135deg, #dbeafe, #eff6ff);
     color: #1e293b;
@@ -23,7 +29,10 @@ body {
     transition: background 0.4s, color 0.4s;
 }
 
-/* Kartu profil */
+/* ========================= */
+/* PROFILE CARD */
+/* ========================= */
+
 .profile-card {
     width: 100%;
     max-width: 420px;
@@ -32,7 +41,7 @@ body {
 
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
 
     border: 1px solid #bfdbfe;
     border-radius: 25px;
@@ -48,7 +57,10 @@ body {
     transform: translateY(-5px);
 }
 
-/* Badge */
+/* ========================= */
+/* BADGE */
+/* ========================= */
+
 .badge {
     display: inline-block;
 
@@ -56,7 +68,6 @@ body {
     color: white;
 
     padding: 8px 16px;
-
     border-radius: 30px;
 
     font-size: 13px;
@@ -64,7 +75,10 @@ body {
     margin-bottom: 20px;
 }
 
-/* Foto profil */
+/* ========================= */
+/* FOTO PROFIL */
+/* ========================= */
+
 .avatar {
     width: 130px;
     height: 130px;
@@ -72,7 +86,6 @@ body {
     margin: 0 auto 20px;
 
     border-radius: 50%;
-
     padding: 4px;
 
     background: linear-gradient(135deg, #2563eb, #9333ea);
@@ -80,7 +93,6 @@ body {
     overflow: hidden;
 }
 
-/* Gambar di dalam lingkaran */
 .avatar img {
     width: 100%;
     height: 100%;
@@ -88,19 +100,24 @@ body {
     display: block;
 
     object-fit: cover;
-
     object-position: center;
 
     border-radius: 50%;
 }
 
-/* Nama */
+/* ========================= */
+/* NAMA */
+/* ========================= */
+
 h1 {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-/* Subjudul pekerjaan */
+/* ========================= */
+/* TYPING ANIMATION */
+/* ========================= */
+
 .role {
     color: #38bdf8;
 
@@ -108,9 +125,33 @@ h1 {
     font-weight: bold;
 
     margin-bottom: 20px;
+
+    min-height: 28px;
 }
 
-/* Deskripsi */
+.cursor {
+    display: inline-block;
+
+    color: #7c3aed;
+    font-weight: bold;
+
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* ========================= */
+/* DESKRIPSI */
+/* ========================= */
+
 .description {
     font-size: 15px;
     line-height: 1.8;
@@ -120,16 +161,17 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* Judul hobi */
+/* ========================= */
+/* HOBI */
+/* ========================= */
+
 h2 {
     font-size: 20px;
-
     margin-bottom: 15px;
 
     color: #1d4ed8;
 }
 
-/* Daftar hobi */
 .hobbies {
     display: flex;
 
@@ -143,7 +185,6 @@ h2 {
 
 .hobbies span {
     background: #dbeafe;
-
     color: #1e40af;
 
     padding: 10px 14px;
@@ -159,7 +200,10 @@ h2 {
     transform: translateY(-4px);
 }
 
-/* Tombol kontak */
+/* ========================= */
+/* TOMBOL KONTAK */
+/* ========================= */
+
 .contact-button {
     display: block;
 
@@ -170,7 +214,6 @@ h2 {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
 
     color: white;
-
     text-decoration: none;
 
     font-weight: bold;
@@ -189,7 +232,10 @@ h2 {
     box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
 }
 
-/* Tombol sapa */
+/* ========================= */
+/* TOMBOL SAPA */
+/* ========================= */
+
 .greet-button {
     border: none;
 
@@ -213,7 +259,10 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
 .footer {
     font-size: 13px;
 
@@ -222,7 +271,10 @@ h2 {
     margin-top: 25px;
 }
 
-/* Tombol tema */
+/* ========================= */
+/* TOMBOL TEMA */
+/* ========================= */
+
 .theme-button {
     position: fixed;
 
@@ -276,7 +328,6 @@ body.dark-mode {
 
 .dark-mode .hobbies span {
     background: #334155;
-
     color: #e2e8f0;
 }
 
@@ -286,18 +337,17 @@ body.dark-mode {
 
 .dark-mode .theme-button {
     background: #f1f5f9;
-
     color: #1e293b;
 }
 
 /* ========================= */
-/* RESPONSIVE UNTUK HP */
+/* RESPONSIVE HP */
 /* ========================= */
 
 @media (max-width: 480px) {
 
     body {
-        padding: 25px 15px;
+        padding: 80px 15px 25px;
     }
 
     .profile-card {
@@ -317,30 +367,4 @@ body.dark-mode {
         right: 12px;
     }
 
-}
-
-
-/* Animasi kursor mengetik */
-.cursor {
-    display: inline-block;
-    color: #7c3aed;
-    font-weight: bold;
-
-    animation: blink 0.7s infinite;
-}
-
-/* Kursor berkedip */
-@keyframes blink {
-    0%, 50% {
-        opacity: 1;
-    }
-
-    51%, 100% {
-        opacity: 0;
-    }
-}
-
-/* Tampilan teks typing */
-.role {
-    min-height: 28px;
 }

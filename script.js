@@ -1,6 +1,6 @@
 
 /* ========================= */
-/* TOMBOL SAPA */
+/* 1. TOMBOL SAPA */
 /* ========================= */
 
 const greetButton = document.getElementById("greet-button");
@@ -13,15 +13,15 @@ greetButton.addEventListener("click", function() {
 
 
 /* ========================= */
-/* DARK MODE & LIGHT MODE */
+/* 2. DARK MODE */
 /* ========================= */
 
 const themeButton = document.getElementById("theme-button");
 
-// Mengambil tema yang pernah disimpan
+// Membaca tema yang tersimpan
 const savedTheme = localStorage.getItem("tema");
 
-// Jika sebelumnya menggunakan dark mode
+// Mengatur tema saat halaman dibuka
 if (savedTheme === "gelap") {
 
     document.body.classList.add("dark-mode");
@@ -30,17 +30,17 @@ if (savedTheme === "gelap") {
 
 } else {
 
+    document.body.classList.remove("dark-mode");
+
     themeButton.textContent = "🌙 Dark Mode";
 
 }
 
-
-// Ketika tombol tema diklik
+// Mengganti tema ketika tombol diklik
 themeButton.addEventListener("click", function() {
 
     document.body.classList.toggle("dark-mode");
 
-    // Jika sekarang dark mode
     if (document.body.classList.contains("dark-mode")) {
 
         themeButton.textContent = "☀️ Light Mode";
@@ -58,9 +58,8 @@ themeButton.addEventListener("click", function() {
 });
 
 
-
 /* ========================= */
-/* ANIMASI TEKS MENGETIK */
+/* 3. ANIMASI TYPING */
 /* ========================= */
 
 const typingText = document.getElementById("typing-text");
@@ -76,36 +75,38 @@ let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
+// Fungsi animasi mengetik
 function typingAnimation() {
 
     const currentText = textList[textIndex];
 
-    // Jika sedang mengetik
-    if (!isDeleting) {
+    // Ketika sedang mengetik
+    if (isDeleting === false) {
 
         typingText.textContent =
             currentText.substring(0, charIndex + 1);
 
         charIndex++;
 
-        // Jika tulisan sudah lengkap
+        // Tunggu jika tulisan sudah lengkap
         if (charIndex === currentText.length) {
 
             isDeleting = true;
 
             setTimeout(typingAnimation, 1500);
+
             return;
         }
 
     } else {
 
-        // Jika sedang menghapus tulisan
+        // Ketika sedang menghapus tulisan
         typingText.textContent =
             currentText.substring(0, charIndex - 1);
 
         charIndex--;
 
-        // Jika tulisan sudah terhapus
+        // Jika tulisan sudah habis dihapus
         if (charIndex === 0) {
 
             isDeleting = false;
@@ -114,17 +115,21 @@ function typingAnimation() {
 
             // Kembali ke tulisan pertama
             if (textIndex === textList.length) {
+
                 textIndex = 0;
+
             }
 
         }
+
     }
 
-    // Kecepatan animasi
+    // Kecepatan mengetik dan menghapus
     const speed = isDeleting ? 50 : 100;
 
     setTimeout(typingAnimation, speed);
+
 }
 
-// Jalankan animasi
+// Menjalankan animasi
 typingAnimation();
